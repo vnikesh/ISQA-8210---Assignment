@@ -7,11 +7,13 @@
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
+{% for post in posts %}
         <div>
-            <p>published: 2017-09-07, 15:37</p>
-            <h2><a href="">My 1st Django</a></h2>
-            <p>My 1st Django in the town.</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ ppost.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+{% end for %}
 
         <div>
             <p>created: 2017-02-14, 22:36</p>
